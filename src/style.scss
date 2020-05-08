@@ -1,0 +1,49 @@
+$font-stack: 'Lato', sans-serif;
+$primary-color: #333;
+$background: azure;
+$button-color: mediumturquoise;
+
+body {
+	font: 100% $font-stack;
+	color: $primary-color;
+	background-color: $background;
+}
+
+.center {
+	max-width: 1060px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.content {
+	flex: 1 0 auto;
+}
+
+.button-main {
+	background-color: $button-color;
+	box-shadow: none;
+	width: 100%;
+	height: 30px;
+	border-style: none;
+	border-radius: 5px;
+	color: white;
+	font-family: $font-stack;
+}
+
+.button-main:hover {
+	background-color: white;
+	border: $button-color 2px solid;
+	color: $button-color;
+	height: 28px;
+}
+
+.select-style {
+	height: 30px;
+	max-width: 250px;
+	border-radius: 5px;
+	border: $button-color 2px solid;
+	font-family: $font-stack;
+	font-size: 18px;
+}

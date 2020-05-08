@@ -1,0 +1,19 @@
+.header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	border: gainsboro 1px solid;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 30px auto;
+}
+
+h1 {
+	display: inline;
+}
+
+a {
+	text-decoration: none;
+	margin-right: 10px;
+}
