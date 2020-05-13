@@ -11,12 +11,14 @@ let catalogListMain = [
 		category: 'fantasy',
 		type: 'catalog',
 		image: fantasyCoverPic,
+		id: 1,
 		books: [
 			{
 				name: ' Классическая Фэнтези',
 				category: 'classic-fantasy',
 				type: 'catalog',
 				image: fantasyCoverPic,
+				id: 2,
 				books: []
 			},
 			{
@@ -24,6 +26,7 @@ let catalogListMain = [
 				category: 'modern-fantasy',
 				type: 'catalog',
 				image: fantasyCoverPic,
+				id: 3,
 				books: []
 			},
 			{
@@ -31,20 +34,23 @@ let catalogListMain = [
 				category: 'fairytales',
 				type: 'catalog',
 				image: fantasyCoverPic,
+				id: 4,
 				books: []
 			},
 			{
 				id: 2,
 				image: imgTudor,
-				autor: 'С.Дж. Тюдор',
+				author: 'С.Дж. Тюдор',
 				name: 'Похищение Энни Торн',
+				id: 5,
 				price: 887.55
 			},
 			{
-				id: 1,
+				id: 3,
 				image: imgFray,
-				autor: 'Макс Фрай',
+				author: 'Макс Фрай',
 				name: 'Наваждения',
+				id: 6,
 				price: 415.42
 			}
 		]
@@ -54,18 +60,19 @@ let catalogListMain = [
 		category: 'fantastic',
 		type: 'catalog',
 		image: fantasticCoverPic,
+		id: 7,
 		books: [
 			{
 				id: 2,
 				image: imgTudor,
-				autor: 'С.Дж. Тюдор',
+				author: 'С.Дж. Тюдор',
 				name: 'Похищение Энни Торн',
 				price: 887.55
 			},
 			{
 				id: 1,
 				image: imgFray,
-				autor: 'Макс Фрай',
+				author: 'Макс Фрай',
 				name: 'Наваждения',
 				price: 415.42
 			}
@@ -76,37 +83,38 @@ let catalogListMain = [
 		category: 'detectives',
 		type: 'catalog',
 		image: detectivesCoverPic,
+		id: 8,
 		books: [
 			{
-				id: 2,
+				id: 9,
 				image: imgTudor,
-				autor: 'С.Дж. Тюдор',
+				author: 'С.Дж. Тюдор',
 				name: 'Похищение Энни Торн',
 				price: 887.55
 			}
 		]
 	},
 	{
-		id: 3,
+		id: 10,
 		image: imgRadchenko,
 		type: 'book',
-		autor: 'Сергей Радченко',
+		author: 'Сергей Радченко',
 		name: 'Глазами Волка',
 		price: 124.97
 	},
 	{
-		id: 1,
+		id: 11,
 		image: imgFray,
 		type: 'book',
-		autor: 'Макс Фрай',
+		author: 'Макс Фрай',
 		name: 'Наваждения',
 		price: 415.42
 	},
 	{
-		id: 2,
+		id: 12,
 		image: imgTudor,
 		type: 'book',
-		autor: 'С.Дж. Тюдор',
+		author: 'С.Дж. Тюдор',
 		name: 'Похищение Энни Торн',
 		price: 887.55
 	}

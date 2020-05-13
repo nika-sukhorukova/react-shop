@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/header';
-import Footer from './components/footer';
-import Catalog from './components/catalog';
-import Cart from './components/cart';
-import OrderForm from './components/order-form';
+import Footer from './components/auxiliary components/footer';
+import Catalog from './components/catalog-page';
+import Cart from './components/cart-page';
+import OrderForm from './components/order-page';
 
 function App() {
 	return (

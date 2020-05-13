@@ -1,0 +1,7 @@
+export const INIT = 'INIT';
+export const CHANGE_CATEGORY = 'CHANGE_CATEGORY';
+export const SET_STATE = 'SET_STATE';
+export const CHANGE_BREADCRUMB = 'CHANGE_BREADCRUMB';
+export const SET_ITEMS = 'SET_ITEMS';
+export const SET_STATE_CATALOG_PAGE = 'SET_STATE_CATALOG_PAGE';
+

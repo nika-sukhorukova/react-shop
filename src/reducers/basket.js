@@ -1,13 +1,14 @@
-import * as c from '../constants/catalog';
+import * as c from '../constants/basket.js';
 
 const initialState = {
-	isLoading: true,
-	breadcrumb:[{}],
-};
+    items: [{
+
+    }],
+}
 
 export default (state = initialState, action) => {
 	switch (action.type) {
-		case c.SET_STATE_CATALOG_PAGE:
+		case c.CHANGE_BASKET:
 			return {
 				...state,
 				...action.data
