@@ -13,6 +13,7 @@ class Header extends React.PureComponent{
 		window.location.href = '/';
 	}
 	render() {
+		const { items, totalPrice } = this.props.basket;
 		return (
 			<div>
 				<header className="header">
@@ -21,7 +22,9 @@ class Header extends React.PureComponent{
 					</div>
 					<div>
 						<Basket/>
-						<span></span>
+						{totalPrice > 0 ? (
+							<span>{totalPrice}</span>
+						): null}
 					</div>
 				</header>
 			</div>
@@ -33,6 +36,5 @@ export default connect(
 	(state) => state,
 	(dispatch) => ({
 		actions: bindActionCreators(actions, dispatch),
-
-	})
+})
 )(Header);

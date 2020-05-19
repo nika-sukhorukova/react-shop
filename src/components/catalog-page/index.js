@@ -5,28 +5,29 @@ import Card from './card';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actions from '../../actions/catalog';
-import { changeBasket } from '../../actions/basket';
+import * as basketActions from '../../actions/basket';
 import Breadcrumbs from './breadcrumbs';
 
 import './style.scss';
 
 class Catalog extends React.Component {
 	componentDidMount() {
-		this.props.actions.init()
+		this.props.actions.catalog.init()
 	}
 
 	handleClick = item => {
-		const { changeCategory, changeBasket } = this.props.actions;
+		const { changeCategory } = this.props.actions.catalog;
+		const { changeBasket } = this.props.actions.basket;
 		if (item.type === 'catalog') {
 			changeCategory(item);
-		} else if(item.type === 'book'){
-			debugger
+		} else {
 			changeBasket(item)
 		}
 	};
 
 	handleChangeBreadcrumb = breadcrumb => {
-		 this.props.actions.changeBreadcrumb(breadcrumb);
+		const { changeBreadcrumb } = this.props.actions.catalog;
+		changeBreadcrumb(breadcrumb);
 	}
 
 	render() {
@@ -34,9 +35,7 @@ class Catalog extends React.Component {
 			isLoading, 
 			breadcrumb,
 		} = this.props.catalog;
-
 		const books = breadcrumb[breadcrumb.length - 1].books;
-
 		return (
 			<div className="main-content">
 				<div>
@@ -59,10 +58,14 @@ class Catalog extends React.Component {
 	}
 }
 
-
 export default connect(
 	(state) => state,
 		(dispatch) => ({
-			init: () => dispatch(actions.init())
+		actions: {
+			catalog: bindActionCreators(actions, dispatch),
+			basket: bindActionCreators(basketActions, dispatch)
+		}
 	})
 )(Catalog);
+
+
